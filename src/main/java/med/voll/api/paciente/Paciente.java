@@ -22,10 +22,8 @@ public class Paciente {
     private String email;
     private String cpf;
     private String telefone;
-
     @Embedded
     private Endereco endereco;
-
     private Boolean ativo;
 
     public Paciente(DadosCadastroPaciente dados) {
@@ -46,7 +44,6 @@ public class Paciente {
         if (dados.endereco() != null)
             endereco.atualizarInformacoes(dados.endereco());
     }
-
     public void inativar() {
         this.ativo = false;
     }
