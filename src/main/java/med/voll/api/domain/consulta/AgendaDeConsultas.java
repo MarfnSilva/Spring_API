@@ -28,6 +28,7 @@ public class AgendaDeConsultas {
             throw new ValidacaoException("Médico não encontrado!");
         }
 
+
         var paciente = pacienteRepository.getReferenceById(dados.idPaciente());
         var medico = escolherMedico(dados);
         var consulta = new Consulta(null, medico, paciente, dados.data(), null);
